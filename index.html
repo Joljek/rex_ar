@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+  <script src="https://raw.githack.com/jeromeetienne/AR.js/3.4.1/aframe/build/aframe-ar.js"></script>
+
+  <body style="margin: 0px; overflow: scroll">
+    <a-scene embedded arjs>
+      <!--объявляем маркер hiro-->
+      <a-marker preset="hiro">
+        <!--ссылаемся на свою модель-->
+        <a-entity
+          position="100 100 0"
+          scale="5 5 5"
+          gltf-model="https://cdn.glitch.global/bdb7bc34-9d78-4245-b5b6-62901bc592fc/model.gltf"
+        ></a-entity>
+      </a-marker>
+
+      <!-- Вызываем камеру -->
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
